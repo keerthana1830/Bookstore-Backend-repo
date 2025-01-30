@@ -10,12 +10,7 @@ const Cart = require("./models/Cart");
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON data
-const corsOptions = {
-  origin: "http://localhost:5173",
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(cors());
 // Middleware to enable CORS
 
 // Connect to MongoDB
